@@ -42,3 +42,17 @@ Aqui pode ser encontrado o motivo pelo qual deve-se armazenar as respostas das A
     User: user
     Password: password
     Database: restaurant
+
+# Kanban do desafio
+| **Backlog**                                    | **Em Progresso**                         | **Concluído**                              |
+|-----------------------------------------------|------------------------------------------|--------------------------------------------|
+| Configurar pipeline de CI/CD                  |                                          | Criar estrutura inicial do projeto (23/11) |
+| Criar testes automatizados para o script      |                                          | Escrever script `init_db.sql` (23/11)      |
+| Adicionar suporte a múltiplos arquivos JSON   |                                          | Configurar `docker-compose.yml` (23/11)    |
+| Implementar logging detalhado no script Python|                                          | Escrever script `load_json.py` (23-24/11)  |
+| Criar visualizações no Power BI               |                                          | Testar contêineres Docker (24/11)          |
+| Configurar monitoramento com Grafana          |                                          | Validar consultas SQL no banco (24/11)     |
+|                                               |                                          | Implementar Data Lake para APIs (25/11)    |
+|                                               |                                          | Criar scripts para consumo de APIs (25/11) |
+|                                               |                                          | Ajustar ingestão no banco para novo JSON (25/11) |
+
