@@ -1,7 +1,7 @@
 import json
 import psycopg2
 
-# Configurações do banco de dados
+
 DB_HOST = "db"
 DB_NAME = "restaurant"
 DB_USER = "user"
@@ -9,19 +9,18 @@ DB_PASSWORD = "password"
 JSON_PATH = "/app/data/ERP.json"
 
 def load_data():
-    # Ler o JSON
+
     with open(JSON_PATH, 'r') as file:
         data = json.load(file)
 
-    # Conectar ao banco de dados
+
     conn = psycopg2.connect(
         dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD, host=DB_HOST
     )
     cur = conn.cursor()
 
-    # Iterar sobre os dados de guestChecks
+
     for guestCheck in data["guestChecks"]:
-        # Inserir dados em guestChecks
         cur.execute("""
             INSERT INTO guestChecks (guestCheckId, chkNum, opnBusDt, clsdBusDt, clsdFlag, gstCnt, subTtl, chkTtl, payTtl)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
@@ -34,7 +33,7 @@ def load_data():
             guestCheck["payTtl"]
         ))
 
-        # Inserir dados em taxes
+
         if "taxes" in guestCheck:
             for tax in guestCheck["taxes"]:
                 cur.execute("""
@@ -46,12 +45,12 @@ def load_data():
                     tax["taxRate"], tax["taxCollTtl"]
                 ))
 
-        # Inserir dados em detailLines e menuItem
+
         if "detailLines" in guestCheck:
             for detailLine in guestCheck["detailLines"]:
                 menu_item = detailLine.get("menuItem")
                 if menu_item:
-                    # Inserir dados em menuItem
+
                     cur.execute("""
                         INSERT INTO menuItem (menuItemId, inclTax, activeTaxes)
                         VALUES (%s, %s, %s)
@@ -60,7 +59,7 @@ def load_data():
                         menu_item["miNum"], menu_item["inclTax"], menu_item["activeTaxes"]
                     ))
 
-                # Inserir dados em detailLines
+
                 cur.execute("""
                     INSERT INTO detailLines (guestCheckId, lineNum, menuItemId)
                     VALUES (%s, %s, %s)
@@ -70,7 +69,7 @@ def load_data():
                     menu_item["miNum"] if menu_item else None
                 ))
 
-    # Confirmar alterações e fechar a conexão
+
     conn.commit()
     cur.close()
     conn.close()
