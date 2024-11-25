@@ -25,7 +25,7 @@ Aqui pode ser encontrado o motivo pelo qual deve-se armazenar as respostas das A
 - **`Dockerfile`**: Configuração do contêiner Python.
 
 ## Como Executar
-
+![Animação](https://github.com/user-attachments/assets/ad0ff670-19e9-4e67-b8e3-ec1a4deb5aff)
 1. Clone o repositório:
    ```bash
    git clone https://github.com/EduardoGurgel/desafio-cblab.git
