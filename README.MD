@@ -12,7 +12,8 @@ Aqui pode ser encontrado a descrição em detalhes, justificando a abordagem esc
 [Descrição abordagem escolhida](/scripts/descricao_abordagem_escolhida.md).
 
 # DESAFIO 02
-
+Aqui pode ser encontrado o motivo pelo qual deve-se armazenar as respostas das API's, como eu armazenaria os dados e verificando a resposta do Endpoint getGuestChecks, caso tenha sido alterada: 
+[Desafio 02](/data_lake/desafio_02.md).
 
 ## Estrutura do Projeto
 
@@ -28,7 +29,7 @@ Aqui pode ser encontrado a descrição em detalhes, justificando a abordagem esc
 1. Clone o repositório:
    ```bash
    git clone https://github.com/EduardoGurgel/desafio-cblab.git
-   cd desafio-engenheiro-dados
+   cd desafio-cblab
 2. Suba os serviços:
     ```bash
     docker-compose up --build
