@@ -1,6 +1,18 @@
 # Desafio Engenheiro de Dados CB LAB
+# DESAFIO 01
 
 Este projeto implementa a carga de dados de um JSON para um banco de dados relacional PostgreSQL. A solução é containerizada usando Docker e permite visualização dos dados via Adminer.
+
+## 1 - Descrição do Schema JSON
+Aqui pode ser encontrado a descrição em detalhes:
+[Descrição do Schema JSON](/schema/descricao_schema_json.md).
+
+## 2 - Descrição da abordagem escolhida
+Aqui pode ser encontrado a descrição em detalhes, justificando a abordagem escolhida em detalhes:
+[Descrição abordagem escolhida](/scripts/descricao_abordagem_escolhida.md).
+
+# DESAFIO 02
+
 
 ## Estrutura do Projeto
 
